@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rrask <rrask@student.hive.fi>              +#+  +:+       +#+        */
+/*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:54:41 by rrask             #+#    #+#             */
-/*   Updated: 2023/11/21 10:39:10 by rrask            ###   ########.fr       */
+/*   Updated: 2023/11/22 13:23:28 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@
 # include <MLX42/MLX42.h>
 # include <fcntl.h>
 
-enum e_codes
+enum				e_codes
 {
 	WRONG_INPUT = -1,
 	FD_FAILURE = -2,
 	WRONG_PATH = -3,
 	GNL_FAILURE = -4,
-} code;
+}					code;
 typedef struct s_params
 {
 	int				x_pos;
@@ -42,7 +42,11 @@ typedef struct s_params
 	char			*c_values;
 }					t_params;
 
-void	skip_leading_whitespace(char *line);
-void	error_handler(int error_code);
+void				skip_leading_whitespace(char *line);
+void				error_handler(int error_code);
 
+// posX, poxY -> Player's vector
+// dirX, dirY -> vector that is for player's view
+// planeX,planeY -> vector for camera's plane
+// the ratio of dir and plane will decide viewing angle
 #endif
