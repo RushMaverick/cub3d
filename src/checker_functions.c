@@ -6,11 +6,12 @@
 /*   By: rrask <rrask@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:12:35 by rrask             #+#    #+#             */
-/*   Updated: 2023/12/19 14:52:04 by rrask            ###   ########.fr       */
+/*   Updated: 2023/12/27 15:47:08 by rrask            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
+#include <stdio.h>
 
 int	is_out_of_bounds(char *row, int pos)
 {
@@ -67,6 +68,8 @@ void	are_params_valid(int fd, t_params *params)
 		if (param_count != 6)
 			line = get_next_line(fd);
 	}
+	if (!parameters_present(params))
+		error_handler(NOT_ENOUGH_PARAMS);
 }
 
 int	valid_char_check(char *map_line)

@@ -6,7 +6,7 @@
 /*   By: rrask <rrask@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:54:41 by rrask             #+#    #+#             */
-/*   Updated: 2023/12/19 18:37:24 by rrask            ###   ########.fr       */
+/*   Updated: 2023/12/27 15:48:42 by rrask            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,7 @@ int					map_validator(t_params *params);
 void				my_keyhook(t_params *param);
 int					check_illegal_content(char *line);
 void				get_orientation(char direction, t_params *params);
+int					parameters_present(t_params *params);
 /* RENDERING */
 void				raycasting(t_player *player, t_params *params);
 void				check_for_hit(t_params *params, t_player *player);

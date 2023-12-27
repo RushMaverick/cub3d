@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   color_functions.c                                  :+:      :+:    :+:   */
+/*   color_texture_functions.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrask <rrask@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 10:30:01 by rrask             #+#    #+#             */
-/*   Updated: 2023/12/15 14:39:14 by rrask            ###   ########.fr       */
+/*   Updated: 2023/12/27 15:48:23 by rrask            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,27 @@ int	get_color(char *line)
 	res = get_rgba(rgb[0], rgb[1], rgb[2]);
 	ft_split_free(tmp);
 	return (res);
+}
+
+int	parameters_present(t_params *params)
+{
+	bool	no_param;
+
+	no_param = false;
+	if (!params->ea_texture)
+		no_param = true;
+	if (!params->no_texture)
+		no_param = true;
+	if (!params->we_texture)
+		no_param = true;
+	if (!params->so_texture)
+		no_param = true;
+	if (!params->c_values)
+		no_param = true;
+	if (!params->f_values)
+		no_param = true;
+	if (no_param == true)
+		return (0);
+	else
+		return (1);
 }
