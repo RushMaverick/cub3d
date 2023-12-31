@@ -43,7 +43,7 @@ $(OBJ): $O%.o: $S%
 $(NAME): $(LIBFT) $(OBJ)
 	cmake -B build MLX42
 	cmake --build build -j4
-	$(CC) $(OBJ) $(MAC_LIB) $(FSANITIZE) -o $(NAME)
+	$(CC) $(OBJ) $(LIBRARIES) $(FSANITIZE) -o $(NAME)
 
 $(LIBFT):
 	make FLAGS=$(LIBFT_FLAGS) -C $(LIBFT_DIR)

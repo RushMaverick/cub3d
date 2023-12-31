@@ -6,7 +6,7 @@
 /*   By: rrask <rrask@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:54:41 by rrask             #+#    #+#             */
-/*   Updated: 2023/12/27 15:48:42 by rrask            ###   ########.fr       */
+/*   Updated: 2023/12/31 15:30:10 by rrask            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ typedef struct s_params
 	mlx_texture_t	*ea_texture;
 	mlx_texture_t	*we_texture;
 	mlx_texture_t	*so_texture;
+	mlx_texture_t	*c_texture;
+	mlx_texture_t	*f_texture;
 	mlx_texture_t	*text_to_draw;
 	int				f_values;
 	int				c_values;
