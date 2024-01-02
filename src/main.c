@@ -6,7 +6,7 @@
 /*   By: rrask <rrask@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 13:24:57 by rrask             #+#    #+#             */
-/*   Updated: 2023/12/31 15:30:03 by rrask            ###   ########.fr       */
+/*   Updated: 2024/01/02 10:33:40 by rrask            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,9 @@ int	main(int argc, char **argv)
 		error_handler(WRONG_INPUT);
 	init_params(&params);
 	params.map_path = ft_strdup(argv[1]);
-	if (!params.map_path || !ft_strnstr(params.map_path, ".cub",
-			ft_strlen(params.map_path)))
+	if (!params.map_path || (ft_strlen(params.map_path) > 5
+			&& ft_memcmp(&params.map_path[ft_strlen(params.map_path) - 4],
+				".cub", 4)))
 		error_handler(WRONG_INPUT);
 	fd = open(params.map_path, 2);
 	if (fd == -1)

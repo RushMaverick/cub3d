@@ -6,11 +6,18 @@
 /*   By: rrask <rrask@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:59:48 by rrask             #+#    #+#             */
-/*   Updated: 2023/12/19 15:01:34 by rrask            ###   ########.fr       */
+/*   Updated: 2024/01/02 11:37:36 by rrask            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
+
+void	ray_calc(t_player *player, int i)
+{
+	player->camera_x = 2 * i / (double)SCREEN_WIDTH - 1;
+	player->ray_dir_x = player->dir_x + player->plane_x * player->camera_x;
+	player->ray_dir_y = player->dir_y + player->plane_y * player->camera_x;
+}
 
 void	raycast_calc(t_player *player, t_params *params)
 {
@@ -38,13 +45,6 @@ void	raycast_calc(t_player *player, t_params *params)
 		player->side_dist_y = ((double)params->map_y + 1.0 - player->pos_y)
 			* player->delta_dist_y;
 	}
-}
-
-void	ray_calc(t_player *player, int i)
-{
-	player->camera_x = 2 * i / (double)SCREEN_WIDTH - 1;
-	player->ray_dir_x = player->dir_x + player->plane_x * player->camera_x;
-	player->ray_dir_y = player->dir_y + player->plane_y * player->camera_x;
 }
 
 void	dda_algo(t_player *player, t_params *params)
