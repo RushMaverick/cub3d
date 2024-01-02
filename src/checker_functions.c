@@ -6,12 +6,11 @@
 /*   By: rrask <rrask@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:12:35 by rrask             #+#    #+#             */
-/*   Updated: 2023/12/27 15:47:08 by rrask            ###   ########.fr       */
+/*   Updated: 2024/01/02 12:34:32 by rrask            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
-#include <stdio.h>
 
 int	is_out_of_bounds(char *row, int pos)
 {
