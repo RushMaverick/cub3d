@@ -55,3 +55,6 @@ F 125,125,125
 In order to run this program, you need to have glfw installed which is a dependancy for the MLX library. Be sure to install it before running it. 
 
 Enjoy! 
+
+## Screenshots
+<img width="959" alt="Screen Shot 2024-03-25 at 10 43 00 AM" src="https://github.com/RushMaverick/cub3d/assets/43605579/a3812121-648b-4790-82ff-8f9d8cb5d81a">
